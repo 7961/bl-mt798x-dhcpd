@@ -24,23 +24,14 @@
 	mtd-layout {
 		layout@0 {
 			label = "default";
-			// mtd layout immortalwrt/openwrt 114M ubi firmware
 			mtdids = "nmbm0=nmbm0";
-			mtdparts = "nmbm0:1024k(bl2),512k(u-boot-env),1024k(art),1024k(Factory),2048k(fip),116736k(ubi)";
+			mtdparts = "nmbm0:1024k(bl2),1024k(u-boot-env),2048k(fip),512k(factory),512k(art),2048k(stock-config),114688k(ubi)";
 		};
 
 		layout@1 {
-			label = "stock";
-			// mtd layout for stock layout firmware
+			label = "121M";
 			mtdids = "nmbm0=nmbm0";
-			mtdparts = "nmbm0:1024k(bl2),512k(u-boot-env),1024k(art),1024k(Factory),2048k(fip),65536k(ubi)";
-		};
-
-		layout@2 {
-			label = "256m";
-			// mtd layout for 256m nand firmware
-			mtdids = "nmbm0=nmbm0";
-			mtdparts = "nmbm0:1024k(bl2),512k(u-boot-env),1024k(art),1024k(Factory),2048k(fip),235520k(ubi)";
+			mtdparts = "nmbm0:1024k(bl2),1024k(u-boot-env),2048k(fip),512k(factory),512k(art),2048k(stock-config),123904k(ubi)";
 		};
 	};
 
